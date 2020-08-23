@@ -1,0 +1,36 @@
+[
+    {
+        "nombre": "DayoScript",
+        "correo": "dayo@gmail.com",
+        "password": "dayo123",
+        "imagenCanal": "img\/canales\/canal13.jpg",
+        "portadaCanal": "img\/portadas\/1.jfif",
+        "suscriptores": 0,
+        "suscripciones": [
+            "Ibai",
+            "Erick Reyes"
+        ]
+    },
+    {
+        "nombre": "Ibai",
+        "correo": "gordo@forro.com",
+        "password": "ibai123",
+        "imagenCanal": "img\/canales\/canal6.jpg",
+        "portadaCanal": "img\/portadas\/1.jfif",
+        "suscriptores": 0,
+        "suscripciones": [
+            "Erick Reyes"
+        ]
+    },
+    {
+        "nombre": "Erick Reyes",
+        "correo": "erick@poo.com",
+        "password": "erick123",
+        "imagenCanal": "img\/canales\/canal5.jpg",
+        "portadaCanal": "img\/portadas\/1.jfif",
+        "suscriptores": 0,
+        "suscripciones": [
+            "DayoScript"
+        ]
+    }
+]

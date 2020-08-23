@@ -1,0 +1,65 @@
+[
+    {
+        "video": "img\/videos\/1.mp4",
+        "miniatura": "img\/miniaturas\/3.webp",
+        "imagenCanal": "img\/canales\/canal6.jpg",
+        "titulo": "Mario murio :c",
+        "nombreCanal": "Ibai",
+        "visualizaciones": 489,
+        "fecha": "2020-08-12"
+    },
+    {
+        "video": "img\/videos\/1.mp4",
+        "miniatura": "img\/miniaturas\/6.webp",
+        "imagenCanal": "img\/canales\/canal6.jpg",
+        "titulo": "MARIO NOOOOO ",
+        "nombreCanal": "Ibai",
+        "visualizaciones": 10,
+        "fecha": ""
+    },
+    {
+        "video": "img\/videos\/2.mp4",
+        "miniatura": "img\/miniaturas\/16.webp",
+        "imagenCanal": "img\/canales\/canal13.jpg",
+        "titulo": "Vamos maomeno",
+        "nombreCanal": "DayoScript",
+        "visualizaciones": 53,
+        "fecha": "2020-08-06"
+    },
+    {
+        "video": "img\/videos\/2.mp4",
+        "miniatura": "img\/miniaturas\/20.webp",
+        "imagenCanal": "img\/canales\/canal13.jpg",
+        "titulo": "A llorar pos",
+        "nombreCanal": "DayoScript",
+        "visualizaciones": 6,
+        "fecha": "2020-08-18"
+    },
+    {
+        "video": "img\/videos\/2.mp4",
+        "miniatura": "img\/miniaturas\/17.webp",
+        "imagenCanal": "img\/canales\/canal5.jpg",
+        "titulo": "Programando alguna wea xd",
+        "nombreCanal": "Erick Reyes",
+        "visualizaciones": 34,
+        "fecha": "2019-12-24"
+    },
+    {
+        "video": "img\/videos\/3.mp4",
+        "miniatura": "img\/miniaturas\/1.jpg",
+        "imagenCanal": "img\/canales\/canal5.jpg",
+        "titulo": "MUCHO TEXTO",
+        "nombreCanal": "Erick Reyes",
+        "visualizaciones": "0",
+        "fecha": "03\/03\/2019"
+    },
+    {
+        "video": "img\/videos\/5.mp4",
+        "miniatura": "img\/miniaturas\/14.webp",
+        "imagenCanal": "img\/canales\/canal13.jpg",
+        "titulo": "No carga la wea esta foooook",
+        "nombreCanal": "DayoScript",
+        "visualizaciones": 0,
+        "fecha": "2020-08-17"
+    }
+]

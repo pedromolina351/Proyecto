@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="no-js"> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="shortcut icon" href="img/icono.ico" type="image/x-icon">
+
+    </head>
+    <body onload="obtenerVideos(); llenarListas(); cargarCuenta(); modoVisitante(); cargarSuscripciones()"><!-- -->
+      <div>
+        <nav id="barra-superior" class="container navbar navbar-expand-lg fixed-top navbar-light bg-light">
+          <div id="head-1" class="form left ocultar-principal">
+            <button id="menu" type="button" onclick="ajustar()">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" style="cursor: pointer;" onclick="home()"><img id="logo" src="img/logo.png" alt="logo youtube"></a>
+          </div>
+          <div id="head-2" class="center">
+            <div class="row m-0">
+              <form class="form-inline my-2 input-group">
+                    <input id="src-buscar" class="form-control mr-sm-2" style="outline: none;" type="search" placeholder="Buscar" aria-label="Search">
+                    <button id="btn-buscar" type="button" onclick="buscarVideos()" class="btn pintar"><i id="lupa" class="fas fa-search" style="color: #929292;"></i></button>
+              </form>
+            </div>
+          </div>
+          <div id="head-3" class="right">
+            <div>
+              <button id="btn-nuevo-video" type="button" data-toggle="modal" data-target="#nuevo-video" class="estilo-iconos ocultar-btns"><i class="fas fa-video" class="estilo-label"></i></button>
+              <!--Ventana modal -->
+                <div class="modal fade" id="nuevo-video" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Subir video</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body row">
+                        <label style="display: flex">Video</label>
+                        <select class="form-control mb-2" id="lista-videos"></select>
+                        <label style="display: flex">Miniatura</label>
+                        <select class="form-control mb-2" id="lista-imagenes"></select>
+                        <input class="form-control my-2" type="text" id="nombre-nuevo-video" placeholder="Titulo">
+                        <input class="form-control my-2" type="date" id="fecha-nuevo-video">
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" onclick="nuevoVideo()" class="btn btn-primary">Guardar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Fin ventana modal-->
+              <button id="btn-apps-youtube" data-toggle="tooltip" data-placement="bottom" title="Aplicaciones de youtube" class="estilo-iconos ocultar-btns"><i class="fas fa-cubes" class="estilo-label"></i></button>
+              <button id="btn-notificaciones" data-toggle="tooltip" data-placement="bottom" title="Notificaciones" class="estilo-iconos ocultar-btns"><i class="fas fa-bell" class="estilo-label"></i></button>
+                <button data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="cuenta" class="redondo " ></button>
+                <div id="info-canal" class="dropdown-menu dropdown-menu-right">
+                </div>
+            </div>
+          </div>
+        </nav>
+        <div  id="barra-lateral" class="ocultar-div" style="overflow-y: scroll;" >
+            <Button onclick="home()" class="laterales btn form-control botones-laterales" autofocus><i class="fas fa-home"></i>  Inicio</Button><br>
+            <button onclick="tendencias()" class="laterales btn form-control botones-laterales"><i class="fas fa-fire"></i>  Tendencias</button><br>
+            <button id="btn-sus1" onclick="ventanaSuscripciones()" class="laterales btn form-control botones-laterales"><i class="fas fa-caret-square-right"></i>  Suscripciones</button><br>
+            <hr>
+            <button id="btn-bib" class="laterales btn form-control botones-laterales"><i class="fas fa-folder"></i>  Biblioteca</button><br>
+            <button id="btn-his" class="laterales btn form-control botones-laterales"><i class="fas fa-history"></i>  Historial</button><br>
+            <button id="btn-mis" class="laterales btn form-control botones-laterales"><i class="far fa-caret-square-right"></i>  Mis videos</button><br>
+            <button id="btn-ver" class="laterales btn form-control botones-laterales"><i class="fas fa-history"></i>  Ver mas tarde</button><br>
+            <button id="btn-vid2" class="laterales btn form-control botones-laterales"><i class="fas fa-thumbs-up"></i>  Videos que me gustan</button><br>
+            <button id="btn-lis" class="laterales btn form-control botones-laterales"><i class="fas fa-bars"></i>  Lista de reproduccion</button><br>
+            <hr>
+            <h6><center>Suscripciones</center></h6><br>
+            <div id="suscripciones">
+            </div>
+        </div>
+        <div id="barra-oculta" class="oculto atrib mostrar-div">
+          <Button onclick="home()" id="btn-m-inicio" class="laterales btn form-control botones-ocultos"><i class="fas fa-home iconos-barra-oculta"></i></Button><br>
+          <label  class="label-barra-oculta" for="btn-m-inicio">Inicio</label><br>
+          <button onclick="tendencias()" id="btn-m-tendencias" class="laterales btn form-control botones-ocultos"><i class="fas fa-fire iconos-barra-oculta"></i></button><br>
+          <label class="label-barra-oculta" for="btn-m-tendencias">Tendencias</label><br>
+          <button id="btn-m-suscripciones" class="laterales btn form-control botones-ocultos"><i class="fas fa-caret-square-right iconos-barra-oculta"></i> </button><br>
+          <label onclick="ventanaSuscripciones()" id="lblsus" class="label-barra-oculta" for="btn-m-suscripciones">Suscripciones</label><br>
+          <button id="btn-m-biblioteca" class="laterales btn form-control botones-ocultos"><i class="fas fa-folder iconos-barra-oculta"></i></button><br>
+          <label id="lblbib" class="label-barra-oculta" for="btn-m-biblioteca">Biblioteca</label>
+        </div>
+      <div id="contenido" class="reducir-margen">
+        <div id="contenedor-videos" class="row">
+          
+        </div>
+      </div>
+
+      <script src="https://kit.fontawesome.com/ae32b6cbf5.js" crossorigin="anonymous"></script>
+      <script src="js/jquery-3.4.1.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/axios.min.js"></script>
+      <script src="js/controlador.js"></script>
+      <script src="js/controlador-login.js"></script>
+    </body>
+</html>

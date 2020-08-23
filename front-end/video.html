@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="no-js"> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="shortcut icon" href="img/icono.ico" type="image/x-icon">
+
+    </head>
+    <body onload="cargarCuenta(); cargarVideo()">
+      <div>
+        <nav id="barra-superior" class="container navbar navbar-expand-lg fixed-top navbar-light bg-dark">
+          <div id="head-1" class="form left">
+            <a class="navbar-brand" href="index.html"><img id="logo" src="img/logo.png" alt="logo youtube"></a>
+          </div>
+          <div id="head-2" class="center">
+            <div class="row m-0">
+              <form class="form-inline my-2 input-group">
+                    <input id="src-buscar" class="form-control mr-sm-2" style="outline: none;" type="search" placeholder="Buscar" aria-label="Search">
+                    <button id="btn-buscar" type="button" class="btn pintar"><i id="lupa" class="fas fa-search" style="color: #929292;"></i></button>
+              </form>
+            </div>
+          </div>
+          <div id="head-3 right">
+            <div>
+              <button id="btn-apps-youtube" data-toggle="tooltip" data-placement="bottom" title="Aplicaciones de youtube" class="estilo-iconos"><i class="fas fa-cubes" class="estilo-label"></i></button>
+              <button id="btn-notificaciones" data-toggle="tooltip" data-placement="bottom" title="Notificaciones" class="estilo-iconos"><i class="fas fa-bell" class="estilo-label"></i></button>
+              <button data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="cuenta" class="redondo"></button>
+              <div id="info-canal" class="dropdown-menu dropdown-menu-right">
+              </div>
+            </div>
+          </div>
+        </nav>
+   <div id="loader">
+      <!--AQUI SE CARGARA TODO DESDE EL CONTROLADOR-->
+    </div>  
+      <script src="https://kit.fontawesome.com/ae32b6cbf5.js" crossorigin="anonymous"></script>
+      <script src="js/jquery-3.4.1.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/axios.min.js"></script>
+      <script src="js/controlador-video.js"></script>
+    </body>
+</html>
